@@ -1,0 +1,24 @@
+[project]
+name = "mjlab-sim2sim"
+version = "0.1.0"
+description = "Sim2sim transfer of mjlab-trained policies into ManiSkill3 (SAPIEN)."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mani_skill==3.0.1",
+    "mujoco==3.11.0",
+    "onnxruntime>=1.20",
+    "numpy",
+    "trimesh",
+    "tyro",
+    "imageio[ffmpeg]",
+]
+
+[project.scripts]
+sim2sim-play = "mjlab_sim2sim.cli:main"
+sim2sim-inspect = "mjlab_sim2sim.cli:inspect_main"
+sim2sim-compare = "mjlab_sim2sim.compare:main"
+
+[build-system]
+requires = ["uv_build>=0.8,<0.14"]
+build-backend = "uv_build"

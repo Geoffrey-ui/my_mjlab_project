@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+# Generated artifacts (re-create with tools/export_mjlab.py / sim2sim-play)
+bundles/
+outputs/
+.mesh_cache/

@@ -1,0 +1,26 @@
+[project]
+name = "my-mjlab-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Geoffrey-ui", email = "996809732@qq.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "mjlab>=1.6.0",
+    "onnxruntime>=1.31.0",
+]
+
+[project.scripts]
+my-mjlab-project = "my_mjlab_project:main"
+
+[project.entry-points."mjlab.tasks"]
+mjlab_manipulation = "mjlab_manipulation"
+
+[tool.uv.build-backend]
+module-name = "mjlab_manipulation"
+
+[build-system]
+requires = ["uv_build>=0.13.3,<0.14.0"]
+build-backend = "uv_build"
